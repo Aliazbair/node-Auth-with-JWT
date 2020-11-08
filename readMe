@@ -1,1 +1,6 @@
 #Creat node auth app
+
+
+# hashed password
+1.go to user model
+2-make function fire  after doc saved to db
