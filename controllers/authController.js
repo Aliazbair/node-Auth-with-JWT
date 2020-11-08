@@ -26,8 +26,8 @@ const handleErrors = (err) => {
 }
 
 module.exports.signup_get = (req, res) => {
-//   res.render('signup')
-res.send('hi')
+  //   res.render('signup')
+  res.send('hi')
 }
 
 module.exports.login_get = (req, res) => {
@@ -39,7 +39,10 @@ module.exports.signup_post = async (req, res) => {
 
   try {
     const user = await User.create({ email, password })
-    res.status(201).json(user)
+    res.status(201).json({
+      success: true,
+      data: user,
+    })
   } catch (err) {
     const errors = handleErrors(err)
     res.status(404).json({
