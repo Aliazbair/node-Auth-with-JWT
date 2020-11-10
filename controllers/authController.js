@@ -26,8 +26,8 @@ const handleErrors = (err) => {
 }
 
 module.exports.signup_get = (req, res) => {
-  //   res.render('signup')
-  res.send('hi')
+    res.render('signup')
+
 }
 
 module.exports.login_get = (req, res) => {
